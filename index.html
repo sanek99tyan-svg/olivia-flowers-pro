@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#b8c55d" />
+  <meta name="description" content="OLIVA — современные букеты с акцентом на сам цветок. Доставка по Корее, оплата со всего мира." />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="assets/img/icon-192.png" />
+  <link rel="apple-touch-icon" href="assets/img/icon-192.png" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>OLIVA — дом цветов</title>
+</head>
+<body class="home-page">
+  <div class="intro" id="intro" aria-hidden="true">
+    <div class="intro-mark"><span class="intro-dot"></span><span>OLIVA</span></div>
+    <div class="intro-line"><i></i></div>
+    <div class="intro-count" id="introCount">00</div>
+  </div>
+
+  <div class="cursor-orb" id="cursorOrb"></div>
+  <div class="page-progress"><i id="pageProgress"></i></div>
+
+  <div class="topbar">
+    <div class="marquee">
+      <span>Доставка по Корее</span><span>Оплата со всего мира</span><span>Баллы за каждую покупку</span><span>ПН–ВС 11:00–21:00</span>
+      <span>Доставка по Корее</span><span>Оплата со всего мира</span><span>Баллы за каждую покупку</span><span>ПН–ВС 11:00–21:00</span>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <nav class="nav">
+      <a class="brand" href="#top"><img src="assets/img/logo.png" alt="OLIVA"><span>OLIVA</span></a>
+      <div class="navlinks">
+        <a href="#story">История</a><a href="#gallery">Галерея</a><a href="#shop">Букеты</a><a href="#bonus">OLIVA CLUB</a><a href="#contact">Контакты</a>
+      </div>
+      <div class="nav-actions">
+        <a class="iconbtn" href="auth.html" aria-label="Личный кабинет">↗</a>
+        <button class="iconbtn cart-launch" id="cartButton" aria-label="Корзина"><span>Bag</span><b id="cartCount"></b></button>
+        <button class="iconbtn hamb" id="menuButton" aria-label="Меню"><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-head"><span>OLIVA / MENU</span><button id="menuClose">×</button></div>
+    <div class="mobile-links">
+      <a href="#story"><small>01</small><span>История</span></a>
+      <a href="#gallery"><small>02</small><span>Галерея</span></a>
+      <a href="#shop"><small>03</small><span>Букеты</span></a>
+      <a href="#bonus"><small>04</small><span>OLIVA CLUB</span></a>
+      <a href="#contact"><small>05</small><span>Контакты</span></a>
+    </div>
+    <div class="mobile-menu-foot">современная флористика · Korea</div>
+  </aside>
+
+  <main id="top">
+    <section class="hero scene" data-scene="hero">
+      <canvas class="canvas-flower" data-petals="34"></canvas>
+      <div class="hero-aura"></div>
+      <div class="hero-frame">
+        <div class="hero-index"><span>OLV / 01</span><b>SCROLL TO EXPLORE</b></div>
+        <div class="hero-copy split-copy">
+          <div class="eyebrow">OLIVA · дом цветов</div>
+          <h1 class="hero-title">Цветы<br><span>в главной роли.</span></h1>
+          <p>Современные букеты с акцентом на сам цветок. Воздух, форма и характер — без лишнего декора.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary magnetic" href="#shop">Выбрать букет <span>↗</span></a>
+            <a class="round-link magnetic" href="https://api.whatsapp.com/send/?phone=821022688887" target="_blank" rel="noopener">WA</a>
+          </div>
+        </div>
+
+        <div class="hero-flower" id="heroFlower" aria-hidden="true">
+          <div class="halo halo-a"></div><div class="halo halo-b"></div>
+          <svg class="flower-sculpture" viewBox="0 0 700 700">
+            <defs>
+              <radialGradient id="petalA" cx="35%" cy="25%" r="85%"><stop offset="0" stop-color="#ffffff"/><stop offset=".48" stop-color="#eef2c9"/><stop offset="1" stop-color="#89963c"/></radialGradient>
+              <radialGradient id="petalB" cx="45%" cy="18%" r="90%"><stop offset="0" stop-color="#fbfff0"/><stop offset=".55" stop-color="#c9d56f"/><stop offset="1" stop-color="#697424"/></radialGradient>
+              <radialGradient id="core" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#f2f5cf"/><stop offset=".42" stop-color="#b7c45e"/><stop offset="1" stop-color="#536018"/></radialGradient>
+              <filter id="soft"><feGaussianBlur stdDeviation="2.2"/></filter>
+              <filter id="shadow"><feDropShadow dx="0" dy="28" stdDeviation="20" flood-color="#3d4812" flood-opacity=".28"/></filter>
+            </defs>
+            <g class="petal-set" filter="url(#shadow)" transform="translate(350 350)">
+              <path class="p p1" d="M0-62 C-80-188 -42-314 30-320 C108-327 139-214 72-101 C48-61 28-45 0-62Z" fill="url(#petalA)"/>
+              <path class="p p2" d="M52-37 C159-145 281-128 310-61 C341 11 241 78 111 39 C65 25 40 1 52-37Z" fill="url(#petalB)"/>
+              <path class="p p3" d="M61 32 C191 50 245 157 203 216 C157 280 46 228 2 105 C-14 60 8 29 61 32Z" fill="url(#petalA)"/>
+              <path class="p p4" d="M6 65 C19 200 -62 293 -128 274 C-201 253-189 133-90 49 C-55 20-14 18 6 65Z" fill="url(#petalB)"/>
+              <path class="p p5" d="M-58 34 C-182 89-286 26-282-46 C-279-124-164-153-64-77 C-27-48-15 2-58 34Z" fill="url(#petalA)"/>
+              <path class="p p6" d="M-49-38 C-146-132-117-259-44-286 C31-314 98-220 66-93 C54-47 4-10-49-38Z" fill="url(#petalB)"/>
+              <path class="p p7" d="M-14-38 C-54-122 11-194 77-171 C139-149 133-58 63 5 C31 34 1 17-14-38Z" fill="#f7f8df" opacity=".95"/>
+              <path class="p p8" d="M32-7 C119-42 172 25 146 81 C121 137 33 127 -17 69 C-47 35-21 14 32-7Z" fill="#a8b552"/>
+              <path class="p p9" d="M-18 28 C-85 103-167 69-170 4 C-173-55-91-91-23-50 C16-27 21-14-18 28Z" fill="#dfe6a4"/>
+              <circle r="72" fill="url(#core)"/>
+              <circle r="28" fill="#56621d" opacity=".55" filter="url(#soft)"/>
+            </g>
+          </svg>
+          <div class="flower-label label-a">ручная сборка</div>
+          <div class="flower-label label-b">fresh / daily</div>
+        </div>
+
+        <div class="hero-sideword">FLOWERS / KOREA</div>
+        <div class="hero-foot">
+          <span>ИНЧХОН · АНСАН · АНСОНГ · ЧХОНДЖУ · ПОСЫН · ДУНПО</span>
+          <span class="hero-pagination"><i></i> 01 / 05</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="story section scene" id="story" data-scene="story">
+      <canvas class="canvas-flower" data-petals="16"></canvas>
+      <svg class="botanical botanical-a" viewBox="0 0 320 520" aria-hidden="true"><path d="M146 520C149 404 139 262 162 38"/><path d="M153 330C111 294 74 250 50 183"/><path d="M155 248C211 220 251 173 283 103"/><path d="M113 286C72 265 40 281 20 324C64 335 93 323 113 286Z"/><path d="M199 211C240 191 276 202 307 240C266 252 230 242 199 211Z"/></svg>
+      <div class="container story-head reveal">
+        <div><div class="eyebrow">01 / philosophy</div><h2 class="display">Не прячем<br>цветок за упаковкой.</h2></div>
+        <p class="lead">OLIVA собирает композиции, где каждый стебель остается заметным. Никакого визуального шума — только форма, фактура и свежесть.</p>
+      </div>
+      <div class="story-stage" id="storyStage">
+        <article class="story-panel active" data-n="01">
+          <div class="story-ghost">01</div><div class="panel-icon">⌇</div>
+          <div class="panel-copy"><small>PRODUCT</small><h3>Цветок<br>с характером</h3><p>Сезонные сочетания, мягкая асимметрия и свободное пространство.</p></div>
+          <div class="panel-flower"><span></span><span></span><span></span><span></span></div>
+        </article>
+        <article class="story-panel" data-n="02">
+          <div class="story-ghost">02</div><div class="panel-icon">◌</div>
+          <div class="panel-copy"><small>SERVICE</small><h3>Собираем<br>в день заказа</h3><p>Чтобы композиция приехала свежей и сохранила движение каждого цветка.</p></div>
+          <div class="panel-orbit"><i></i><i></i><i></i></div>
+        </article>
+        <article class="story-panel" data-n="03">
+          <div class="story-ghost">03</div><div class="panel-icon">↗</div>
+          <div class="panel-copy"><small>DELIVERY</small><h3>По всей<br>Корее</h3><p>Заказать можно из любой страны — получатель получит букет в Корее.</p></div>
+          <div class="panel-rings"></div>
+        </article>
+        <article class="story-panel" data-n="04">
+          <div class="story-ghost">04</div><div class="panel-icon">✦</div>
+          <div class="panel-copy"><small>OLIVA CLUB</small><h3>Цветы<br>возвращаются</h3><p>Баллы за покупки, персональные купоны и сюрпризы для постоянных клиентов.</p></div>
+          <div class="panel-points">+5%</div>
+        </article>
+      </div>
+      <div class="story-controls container"><button id="storyPrev">←</button><div><i id="storyBar"></i></div><button id="storyNext">→</button></div>
+    </section>
+
+    <section class="gallery section scene" id="gallery" data-scene="gallery">
+      <div class="gallery-title container reveal"><div class="eyebrow">02 / gallery</div><h2 class="display">Композиции,<br><span>которые хочется</span> рассматривать.</h2></div>
+      <div class="gallery-rail" id="galleryRail">
+        <article class="art-card art-a"><div class="art-num">01</div><div class="art-flower flower-one"><i></i><i></i><i></i><i></i><i></i><b></b></div><div class="art-meta"><small>AIRY / WHITE</small><h3>Olive Air</h3></div></article>
+        <article class="art-card art-b"><div class="art-num">02</div><div class="art-flower flower-two"><i></i><i></i><i></i><i></i><i></i><i></i><b></b></div><div class="art-meta"><small>SOFT / GREEN</small><h3>Morning Note</h3></div></article>
+        <article class="art-card art-c"><div class="art-num">03</div><div class="art-flower flower-three"><i></i><i></i><i></i><i></i><b></b></div><div class="art-meta"><small>STATEMENT / SINGLE</small><h3>One Flower</h3></div></article>
+        <article class="art-card art-d"><div class="art-num">04</div><div class="art-flower flower-four"><i></i><i></i><i></i><i></i><i></i><b></b></div><div class="art-meta"><small>SEASON / EDITION</small><h3>Green Muse</h3></div></article>
+      </div>
+      <div class="drag-note container"><span>DRAG / SWIPE</span><i></i><span>04 PROJECTS</span></div>
+    </section>
+
+    <section class="shop section scene" id="shop" data-scene="shop">
+      <canvas class="canvas-flower" data-petals="22"></canvas>
+      <svg class="botanical botanical-b" viewBox="0 0 360 500" aria-hidden="true"><path d="M176 490C178 372 159 243 188 20"/><path d="M180 319C128 282 90 232 68 165"/><path d="M184 231C239 214 286 168 325 94"/><path d="M136 278C91 260 56 279 34 324C78 337 113 322 136 278Z"/><path d="M221 200C269 181 305 198 333 240C291 248 251 235 221 200Z"/></svg>
+      <div class="container shop-head reveal"><div><div class="eyebrow">03 / mini shop</div><h2 class="display">Выберите<br>настроение.</h2></div><p>Демо-магазин полностью работает без базы: товары, корзина, купоны и заказы сохраняются в браузере.</p></div>
+      <div class="container shop-grid" id="productGrid"></div>
+    </section>
+
+    <section class="bonus section scene" id="bonus" data-scene="bonus">
+      <canvas class="canvas-flower" data-petals="26"></canvas>
+      <div class="bonus-orbit" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="container bonus-grid">
+        <div class="reveal"><div class="eyebrow">04 / OLIVA CLUB</div><h2 class="display">Покупаете цветы.<br>Мы возвращаем <span>баллы.</span></h2><p class="lead">5% от суммы каждого подтвержденного заказа возвращаются на ваш баланс. 1 балл = ₩1.</p><a href="auth.html" class="btn btn-light magnetic">Войти в клуб <span>↗</span></a></div>
+        <div class="club-card reveal delay1" data-tilt>
+          <div class="club-card-top"><span>OLIVA CLUB</span><b>MEMBER / 0001</b></div>
+          <div class="club-points"><small>YOUR BENEFIT</small><strong>+5%</strong></div>
+          <svg viewBox="0 0 260 160" aria-hidden="true"><path d="M127 160C128 112 119 71 132 8M129 98C94 77 72 52 58 17M131 75C169 61 192 40 212 10"/><circle cx="132" cy="8" r="24"/><circle cx="58" cy="17" r="17"/><circle cx="212" cy="10" r="20"/></svg>
+          <div class="club-card-foot"><span>flowers reward</span><span>KOREA</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="promos section scene" id="promos" data-scene="promos">
+      <div class="container promo-head reveal"><div class="eyebrow">05 / offers</div><h2 class="display">Акции без<br>мелкого шрифта.</h2></div>
+      <div class="container promo-grid">
+        <article class="promo-card reveal" data-tilt><div class="promo-no">01</div><div><small>WELCOME</small><h3>−10%<br>на первый заказ</h3><p>Промокод <b>OLIVA10</b> уже работает в корзине.</p></div><span class="promo-arrow">↗</span></article>
+        <article class="promo-card lime reveal delay1" data-tilt><div class="promo-no">02</div><div><small>GIFT</small><h3>Открытка<br>в подарок</h3><p>Добавим короткое послание к композиции.</p></div><span class="promo-arrow">✦</span></article>
+      </div>
+    </section>
+
+    <section class="contact section scene" id="contact" data-scene="contact">
+      <canvas class="canvas-flower" data-petals="18"></canvas>
+      <div class="container contact-grid">
+        <div class="contact-copy reveal"><div class="eyebrow">06 / order</div><h2 class="display">Скажите,<br>для кого цветы.</h2><p class="lead">Мы поможем с размером, настроением и доставкой. Заказать можно из любой страны.</p><div class="contact-time"><span>ПН–ВС</span><b>11:00 — 21:00</b></div></div>
+        <div class="contact-links reveal delay1">
+          <a href="https://api.whatsapp.com/send/?phone=821022688887" target="_blank" rel="noopener"><small>01 / order</small><span>WhatsApp</span><b>↗</b></a>
+          <a href="http://t.me/olivaflowers_kr" target="_blank" rel="noopener"><small>02 / message</small><span>Telegram</span><b>↗</b></a>
+          <a href="https://instagram.com/oliva.flowers.kr" target="_blank" rel="noopener"><small>03 / visual</small><span>@oliva.flowers.kr</span><b>↗</b></a>
+          <a href="auth.html"><small>04 / points</small><span>Личный кабинет</span><b>↗</b></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-top"><div class="footer-brand"><img src="assets/img/logo.png" alt="OLIVA"><div><b>OLIVA</b><span>дом цветов</span></div></div><div class="footer-word">FLOWERS</div></div>
+    <div class="container footer-bottom"><span>© 2026 OLIVA · Korea</span><span>Современные букеты · доставка по Корее</span><button id="installApp" class="install-btn">Установить приложение</button></div>
+  </footer>
+
+  <aside class="cart" id="cart">
+    <div class="cart-head"><div><small>OLIVA / BAG</small><h3>Ваш заказ</h3></div><button class="iconbtn" id="closeCart">×</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer"><div class="coupon-row"><input id="couponInput" placeholder="Промокод"><button class="btn btn-ghost" id="applyCoupon">OK</button></div><div id="couponStatus"></div><div class="cart-total"><span>Итого</span><strong id="cartTotal">₩0</strong></div><button class="btn btn-primary" id="checkout" style="width:100%">Оформить демо-заказ</button></div>
+  </aside>
+  <div class="toast" id="toast"></div>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
